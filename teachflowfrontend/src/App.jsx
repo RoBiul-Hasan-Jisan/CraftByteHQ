@@ -56,17 +56,17 @@ function AppContent() {
   );
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
       <Header />
 
-      <div className="flex flex-1">
-        {showSidebar && <Sidebar />}
+      <div className="p-6 flex space-x-6 min-h-[calc(100vh-120px)]">
+        {showSidebar && (
+          <aside className="w-64 sticky top-0 self-start h-screen overflow-auto border-r border-gray-300">
+            <Sidebar />
+          </aside>
+        )}
 
-        <main
-          className={`flex-1 p-6 bg-gray-50 ${
-            showSidebar ? "" : "mx-auto max-w-4xl"
-          }`}
-        >
+        <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
 
@@ -97,7 +97,7 @@ function AppContent() {
       </div>
 
       <Footer />
-    </div>
+    </>
   );
 }
 
