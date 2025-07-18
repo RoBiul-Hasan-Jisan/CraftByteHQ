@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const categories = [
   { name: "Artificial Intelligence", path: "/ai", icon: "🤖" },
-  { name: "Machine Learning", path: "/ml", icon: "🧠" },
+  { name: "Machine Learning", path: "ml/introduction", icon: "🧠" },
   { name: "Deep Learning", path: "/dl", icon: "🧬" },
   { name: "MLOps", path: "/mlops", icon: "⚙️" },
   { name: "Data Structures & Algorithms", path: "/dsa", icon: "📚" },

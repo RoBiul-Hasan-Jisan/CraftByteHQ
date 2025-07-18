@@ -17,10 +17,31 @@ import LearnComputerNetwork from "./pages/LearnComputerNetwork.jsx";
 import LearnOperatingSystem from "./pages/LearnOperatingSystem.jsx";
 import LearnDBMS from "./pages/LearnDBMS.jsx";
 
+// ML parts
 import MLIntroduction from "./MLslidepages/MLIntroduction.jsx";
 import MLSupervised from "./MLslidepages/MLSupervised.jsx";
 import MLUnsupervised from "./MLslidepages/MLUnsupervised.jsx";
 import MLReinforcement from "./MLslidepages/MLReinforcement.jsx";
+
+import LinearRegression from "./MLslidepages/MLSupervisedExtra/LinearRegression";
+import LogisticRegression from "./MLslidepages/MLSupervisedExtra/LogisticRegression";
+// imports as you build these components
+// import DecisionTree from "./MLslidepages/MLSupervisedExtra/DecisionTree";
+// import RandomForest from "./MLslidepages/MLSupervisedExtra/RandomForest";
+// import SVR from "./MLslidepages/MLSupervisedExtra/SVR";
+// import KNN from "./MLslidepages/MLSupervisedExtra/KNN";
+// import SVM from "./MLslidepages/MLSupervisedExtra/SVM";
+// import NaiveBayes from "./MLslidepages/MLSupervisedExtra/NaiveBayes";
+// import GBM from "./MLslidepages/MLSupervisedExtra/GBM";
+// import AdaBoost from "./MLslidepages/MLSupervisedExtra/AdaBoost";
+// import XGBoost from "./MLslidepages/MLSupervisedExtra/XGBoost";
+// import LightGBM from "./MLslidepages/MLSupervisedExtra/LightGBM";
+// import CatBoost from "./MLslidepages/MLSupervisedExtra/CatBoost";
+
+import SimpleLinearRegression from './MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/SimpleLinearRegression.jsx';
+import MultipleLinearRegression from './MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/MultipleLinearRegression.jsx';
+import PolynomialRegression from './MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/PolynomialRegression.jsx';
+
 
 import DSAArrays from "./dsapages/DSAArrays.jsx";
 import DSALinkedList from "./dsapages/DSALinkedList.jsx";
@@ -30,6 +51,7 @@ import DSAGraphs from "./dsapages/DSAGraphs.jsx";
 function AppContent() {
   const location = useLocation();
 
+  // Paths for which the sidebar should show (including nested)
   const tutorialPaths = [
     "/ai",
     "/ml",
@@ -87,6 +109,27 @@ function AppContent() {
             <Route path="/ml/unsupervised" element={<MLUnsupervised />} />
             <Route path="/ml/reinforcement" element={<MLReinforcement />} />
 
+            {/* ML Supervised detailed routes */}
+            <Route path="/ml/supervised/linear-regression" element={<LinearRegression />} />
+            <Route path="/ml/supervised/logistic-regression" element={<LogisticRegression />} />
+            {/* Add these when you create them */}
+            {/* <Route path="/ml/supervised/decision-tree" element={<DecisionTree />} /> */}
+            {/* <Route path="/ml/supervised/random-forest" element={<RandomForest />} /> */}
+            {/* <Route path="/ml/supervised/svr" element={<SVR />} /> */}
+            {/* <Route path="/ml/supervised/knn" element={<KNN />} /> */}
+            {/* <Route path="/ml/supervised/svm" element={<SVM />} /> */}
+            {/* <Route path="/ml/supervised/naive-bayes" element={<NaiveBayes />} /> */}
+            {/* <Route path="/ml/supervised/gbm" element={<GBM />} /> */}
+            {/* <Route path="/ml/supervised/adaboost" element={<AdaBoost />} /> */}
+            {/* <Route path="/ml/supervised/xgboost" element={<XGBoost />} /> */}
+            {/* <Route path="/ml/supervised/lightgbm" element={<LightGBM />} /> */}
+            {/* <Route path="/ml/supervised/catboost" element={<CatBoost />} /> */}
+
+
+
+               <Route path="/SimpleLinearRegression" element={<SimpleLinearRegression />} />
+        <Route path="/MultipleLinearRegression" element={<MultipleLinearRegression />} />
+        <Route path="/PolynomialRegression" element={<PolynomialRegression />} />
             {/* DSA subtopics */}
             <Route path="/dsa/arrays" element={<DSAArrays />} />
             <Route path="/dsa/linkedlist" element={<DSALinkedList />} />
