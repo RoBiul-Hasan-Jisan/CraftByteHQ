@@ -300,6 +300,20 @@ export default function LinearRegression() {
             <em>Answer:</em> When the relationship is linear and interpretability is needed.</li>
         </ul>
       </section>
+
+      <section className="max-w-3xl mx-auto p-6 bg-white rounded-md shadow-sm border border-gray-200 space-y-4">
+  <h2 className="text-xl font-semibold flex items-center gap-2">
+    🧾 When <span className="text-red-600 underline">NOT</span> to Use Linear Regression
+  </h2>
+  <p>Avoid Linear Regression if:</p>
+  <ul className="list-disc list-inside ml-6 text-gray-700 space-y-1">
+    <li>The relationship is non-linear</li>
+    <li>There is high multicollinearity</li>
+    <li>You have many outliers</li>
+    <li>The error terms are not normally distributed</li>
+  </ul>
+</section>
+
     </div>
   );
 }

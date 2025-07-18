@@ -126,8 +126,8 @@ function AppContent() {
             {/* <Route path="/ml/supervised/catboost" element={<CatBoost />} /> */}
 
 
-
-               <Route path="/SimpleLinearRegression" element={<SimpleLinearRegression />} />
+{/* ML Supervised Liner  Algo */}
+          <Route path="/SimpleLinearRegression" element={<SimpleLinearRegression />} />
         <Route path="/MultipleLinearRegression" element={<MultipleLinearRegression />} />
         <Route path="/PolynomialRegression" element={<PolynomialRegression />} />
             {/* DSA subtopics */}
