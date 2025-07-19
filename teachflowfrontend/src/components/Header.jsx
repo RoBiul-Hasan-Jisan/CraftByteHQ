@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="bg-blue-600 text-white p-4 text-2xl font-bold relative">
       <div className="flex justify-between items-center">
-        {/* Make site name clickable */}
+      
       <Link
   to="/"
   className="cursor-pointer hover:text-blue-300 transition-colors duration-200"

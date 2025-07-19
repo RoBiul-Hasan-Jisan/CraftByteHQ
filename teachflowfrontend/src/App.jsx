@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
-import Sidebar from "./components/Sidebar.jsx";
+// Removed direct Sidebar import here because ResponsiveSidebarWrapper uses it internally
+import ResponsiveSidebarWrapper from "./components/ResponsiveSidebarWrapper.jsx";
 
 import Home from "./pages/Home.jsx";
 
@@ -25,23 +26,10 @@ import MLReinforcement from "./MLslidepages/MLReinforcement.jsx";
 
 import LinearRegression from "./MLslidepages/MLSupervisedExtra/LinearRegression";
 import LogisticRegression from "./MLslidepages/MLSupervisedExtra/LogisticRegression";
-// imports as you build these components
-// import DecisionTree from "./MLslidepages/MLSupervisedExtra/DecisionTree";
-// import RandomForest from "./MLslidepages/MLSupervisedExtra/RandomForest";
-// import SVR from "./MLslidepages/MLSupervisedExtra/SVR";
-// import KNN from "./MLslidepages/MLSupervisedExtra/KNN";
-// import SVM from "./MLslidepages/MLSupervisedExtra/SVM";
-// import NaiveBayes from "./MLslidepages/MLSupervisedExtra/NaiveBayes";
-// import GBM from "./MLslidepages/MLSupervisedExtra/GBM";
-// import AdaBoost from "./MLslidepages/MLSupervisedExtra/AdaBoost";
-// import XGBoost from "./MLslidepages/MLSupervisedExtra/XGBoost";
-// import LightGBM from "./MLslidepages/MLSupervisedExtra/LightGBM";
-// import CatBoost from "./MLslidepages/MLSupervisedExtra/CatBoost";
 
 import SimpleLinearRegression from './MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/SimpleLinearRegression.jsx';
 import MultipleLinearRegression from './MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/MultipleLinearRegression.jsx';
 import PolynomialRegression from './MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/PolynomialRegression.jsx';
-
 
 import DSAArrays from "./dsapages/DSAArrays.jsx";
 import DSALinkedList from "./dsapages/DSALinkedList.jsx";
@@ -51,7 +39,7 @@ import DSAGraphs from "./dsapages/DSAGraphs.jsx";
 function AppContent() {
   const location = useLocation();
 
-  // Paths for which the sidebar should show (including nested)
+  // Paths where sidebar should be shown (including nested routes)
   const tutorialPaths = [
     "/ai",
     "/ml",
@@ -81,14 +69,12 @@ function AppContent() {
     <>
       <Header />
 
-      <div className="p-6 flex space-x-6 min-h-[calc(100vh-120px)]">
-        {showSidebar && (
-          <aside className="w-64 sticky top-0 self-start h-screen overflow-auto border-r border-gray-300">
-            <Sidebar />
-          </aside>
-        )}
+      <div className="p-6 flex space-x-6 min-h-[calc(100vh-120px)] relative">
+        {/* Responsive Sidebar with hamburger toggle */}
+        <ResponsiveSidebarWrapper showSidebar={showSidebar} />
 
-        <main className="flex-1">
+        {/* Main content, margin-left adjusted on desktop when sidebar shown */}
+      <main className={`flex-1 w-full min-h-screen ${!showSidebar ? "" : "md:ml-64"}`}>
           <Routes>
             <Route path="/" element={<Home />} />
 
@@ -112,24 +98,12 @@ function AppContent() {
             {/* ML Supervised detailed routes */}
             <Route path="/ml/supervised/linear-regression" element={<LinearRegression />} />
             <Route path="/ml/supervised/logistic-regression" element={<LogisticRegression />} />
-            {/* Add these when you create them */}
-            {/* <Route path="/ml/supervised/decision-tree" element={<DecisionTree />} /> */}
-            {/* <Route path="/ml/supervised/random-forest" element={<RandomForest />} /> */}
-            {/* <Route path="/ml/supervised/svr" element={<SVR />} /> */}
-            {/* <Route path="/ml/supervised/knn" element={<KNN />} /> */}
-            {/* <Route path="/ml/supervised/svm" element={<SVM />} /> */}
-            {/* <Route path="/ml/supervised/naive-bayes" element={<NaiveBayes />} /> */}
-            {/* <Route path="/ml/supervised/gbm" element={<GBM />} /> */}
-            {/* <Route path="/ml/supervised/adaboost" element={<AdaBoost />} /> */}
-            {/* <Route path="/ml/supervised/xgboost" element={<XGBoost />} /> */}
-            {/* <Route path="/ml/supervised/lightgbm" element={<LightGBM />} /> */}
-            {/* <Route path="/ml/supervised/catboost" element={<CatBoost />} /> */}
 
+            {/* ML Supervised Linear Algorithms */}
+            <Route path="/SimpleLinearRegression" element={<SimpleLinearRegression />} />
+            <Route path="/MultipleLinearRegression" element={<MultipleLinearRegression />} />
+            <Route path="/PolynomialRegression" element={<PolynomialRegression />} />
 
-{/* ML Supervised Liner  Algo */}
-          <Route path="/SimpleLinearRegression" element={<SimpleLinearRegression />} />
-        <Route path="/MultipleLinearRegression" element={<MultipleLinearRegression />} />
-        <Route path="/PolynomialRegression" element={<PolynomialRegression />} />
             {/* DSA subtopics */}
             <Route path="/dsa/arrays" element={<DSAArrays />} />
             <Route path="/dsa/linkedlist" element={<DSALinkedList />} />

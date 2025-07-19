@@ -2,13 +2,19 @@ import React from "react";
 
 export default function MLLifecycle() {
   return (
-    <div className="max-w-3xl mx-auto p-6 space-y-6">
-      <h1 className="text-3xl font-bold mb-6">Machine Learning Lifecycle</h1>
-      <p>
-        The Machine Learning Lifecycle is a step-by-step process that guides how an ML project is planned, developed, deployed, and maintained. It ensures that the model is efficient, reliable, and sustainable in a real-world environment.
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-8">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-blue-700">
+        Machine Learning Lifecycle
+      </h1>
+
+      <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+        The Machine Learning Lifecycle is a step-by-step process that guides how
+        an ML project is planned, developed, deployed, and maintained. It ensures
+        that the model is efficient, reliable, and sustainable in a real-world
+        environment.
       </p>
 
-      <ol className="list-decimal list-inside space-y-6 text-lg">
+      <ol className="list-decimal list-inside space-y-8 text-base sm:text-lg text-gray-800">
         <li>
           <span className="mr-2">🎯</span>
           <strong>Problem Definition</strong><br />
@@ -19,14 +25,14 @@ export default function MLLifecycle() {
             <li>Is it classification, regression, clustering, etc.?</li>
             <li>What will be the input and expected output?</li>
           </ul>
-          Example: Predict customer churn, detect fraud, classify emails.
+          <div className="mt-1 text-gray-600">Example: Predict customer churn, detect fraud, classify emails.</div>
         </li>
 
         <li>
           <span className="mr-2">📥</span>
           <strong>Data Collection</strong><br />
           Gather relevant and sufficient data from various sources (databases, APIs, sensors, user logs, etc.).<br />
-          Quality and quantity of data directly affect the model's success.
+          <div className="mt-1 text-gray-600">Quality and quantity of data directly affect the model's success.</div>
         </li>
 
         <li>
@@ -96,14 +102,18 @@ export default function MLLifecycle() {
             <li>Random Search</li>
             <li>Bayesian Optimization</li>
           </ul>
-          Example: Learning rate, number of trees, depth of tree, etc.
+          <div className="mt-1 text-gray-600">
+            Example: Learning rate, number of trees, depth of tree, etc.
+          </div>
         </li>
 
         <li>
           <span className="mr-2">🚀</span>
           <strong>Deployment</strong><br />
           Deploy the model into a production environment (app, website, server).<br />
-          Users or systems can now use the model to make live predictions.
+          <div className="mt-1 text-gray-600">
+            Users or systems can now use the model to make live predictions.
+          </div>
         </li>
 
         <li>
