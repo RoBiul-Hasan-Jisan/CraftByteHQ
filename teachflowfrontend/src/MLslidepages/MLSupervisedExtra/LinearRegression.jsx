@@ -8,11 +8,11 @@ export default function LinearRegression() {
     navigate(path);
   };
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6">
-      <h1 className="text-3xl font-bold mb-6 text-blue-700">🔷 Linear Regression</h1>
+    <div className="max-w-4xl mx-auto p-6 space-y-6 mt-10">
+      <h1 className="text-3xl font-bold mb-6 text-blue-700"> Linear Regression</h1>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">✅ Definition</h2>
+        <h2 className="text-2xl font-semibold"> Definition</h2>
         <p>
           Linear Regression is a Supervised Machine Learning algorithm used for predicting continuous numerical values. It finds the best-fit straight line (called the regression line) that explains the relationship between:
         </p>
@@ -23,7 +23,7 @@ export default function LinearRegression() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">🧠 How It Works</h2>
+        <h2 className="text-2xl font-semibold"> How It Works</h2>
         <p>It assumes a linear relationship between input and output.</p>
         <p className="font-mono bg-gray-100 p-3 rounded">
           Y = mX + c
@@ -48,7 +48,7 @@ export default function LinearRegression() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">🧮 Goal of the Model</h2>
+        <h2 className="text-2xl font-semibold"> Goal of the Model</h2>
         <p>
           Minimize the error between predicted values (<code>Ŷ</code>) and actual values (<code>Y</code>) using a loss function, commonly:
         </p>
@@ -58,7 +58,7 @@ export default function LinearRegression() {
       </section>
 
        <section className="space-y-3">
-      <h2 className="text-2xl font-semibold">📚 Types of Linear Regression</h2>
+      <h2 className="text-2xl font-semibold"> Types of Linear Regression</h2>
       <table className="w-full border-collapse border border-gray-300">
         <thead>
           <tr className="bg-gray-200">
@@ -96,7 +96,7 @@ export default function LinearRegression() {
     </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">🔍 Real-World Example: House Price Prediction</h2>
+        <h2 className="text-2xl font-semibold"> Real-World Example: House Price Prediction</h2>
         <p>Training Data:</p>
         <table className="w-full border-collapse border border-gray-300">
           <thead>
@@ -126,7 +126,7 @@ export default function LinearRegression() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">💡 Key Points</h2>
+        <h2 className="text-2xl font-semibold"> Key Points</h2>
         <ul className="list-disc list-inside ml-6">
           <li>Type: Regression (continuous output)</li>
           <li>Linearity Assumption: Works best with linear data patterns</li>
@@ -135,7 +135,7 @@ export default function LinearRegression() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">✅ Advantages</h2>
+        <h2 className="text-2xl font-semibold">Advantages</h2>
         <ul className="list-disc list-inside ml-6">
           <li>Simple and efficient</li>
           <li>Easy to interpret</li>
@@ -144,7 +144,7 @@ export default function LinearRegression() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">⚠️ Limitations</h2>
+        <h2 className="text-2xl font-semibold"> Limitations</h2>
         <ul className="list-disc list-inside ml-6">
           <li>Not suitable for non-linear relationships</li>
           <li>Sensitive to outliers</li>
@@ -153,7 +153,7 @@ export default function LinearRegression() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">📚 Types of Linear Regression</h2>
+        <h2 className="text-2xl font-semibold"> Types of Linear Regression</h2>
         <table className="w-full border-collapse border border-gray-300">
           <thead>
             <tr className="bg-gray-200">
@@ -179,7 +179,7 @@ export default function LinearRegression() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">📐 Equation of Linear Regression</h2>
+        <h2 className="text-2xl font-semibold"> Equation of Linear Regression</h2>
         <p>
           <strong>Simple Linear Regression:</strong>
         </p>
@@ -205,7 +205,7 @@ export default function LinearRegression() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">🎯 Goal of Linear Regression</h2>
+        <h2 className="text-2xl font-semibold"> Goal of Linear Regression</h2>
         <p>Minimize the loss function (commonly Mean Squared Error - MSE):</p>
         <p className="font-mono bg-yellow-100 p-3 rounded">
           MSE = (1/n) ∑(Yᵢ - Ŷᵢ)²
@@ -217,7 +217,7 @@ export default function LinearRegression() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">📊 Assumptions of Linear Regression</h2>
+        <h2 className="text-2xl font-semibold"> Assumptions of Linear Regression</h2>
         <table className="w-full border-collapse border border-gray-300">
           <thead>
             <tr className="bg-gray-200">
@@ -251,7 +251,7 @@ export default function LinearRegression() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">⚖️ Advantages of Linear Regression</h2>
+        <h2 className="text-2xl font-semibold"> Advantages of Linear Regression</h2>
         <ul className="list-disc list-inside ml-6">
           <li>Simple and easy to implement</li>
           <li>Computationally efficient</li>
@@ -261,7 +261,7 @@ export default function LinearRegression() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">⚠️ Disadvantages of Linear Regression</h2>
+        <h2 className="text-2xl font-semibold">Disadvantages of Linear Regression</h2>
         <ul className="list-disc list-inside ml-6">
           <li>Assumes linearity</li>
           <li>Sensitive to outliers</li>
@@ -271,9 +271,9 @@ export default function LinearRegression() {
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-2xl font-semibold">🧑‍💼 Interview Questions on Linear Regression</h2>
+        <h2 className="text-2xl font-semibold"> Interview Questions on Linear Regression</h2>
 
-        <h3 className="text-xl font-semibold mt-4">🔹 Basic Questions</h3>
+        <h3 className="text-xl font-semibold mt-4"> Basic Questions</h3>
         <ul className="list-disc list-inside ml-6">
           <li>What is linear regression?</li>
           <li>What is the difference between simple and multiple linear regression?</li>
@@ -282,7 +282,7 @@ export default function LinearRegression() {
           <li>How do you evaluate a linear regression model?</li>
         </ul>
 
-        <h3 className="text-xl font-semibold mt-4">🔹 Intermediate Questions</h3>
+        <h3 className="text-xl font-semibold mt-4"> Intermediate Questions</h3>
         <ul className="list-disc list-inside ml-6">
           <li>What is multicollinearity and how do you detect it?<br />
             <em>Answer:</em> High correlation between independent variables; detected using VIF (Variance Inflation Factor).</li>
@@ -292,7 +292,7 @@ export default function LinearRegression() {
             <em>Answer:</em> It doesn’t handle them natively — preprocessing (e.g., imputation) is required.</li>
         </ul>
 
-        <h3 className="text-xl font-semibold mt-4">🔹 Advanced Questions</h3>
+        <h3 className="text-xl font-semibold mt-4"> Advanced Questions</h3>
         <ul className="list-disc list-inside ml-6">
           <li>What is Regularization in Linear Regression?<br />
             <em>Answer:</em> Techniques like Ridge and Lasso to avoid overfitting.</li>
@@ -303,7 +303,7 @@ export default function LinearRegression() {
 
       <section className="max-w-3xl mx-auto p-6 bg-white rounded-md shadow-sm border border-gray-200 space-y-4">
   <h2 className="text-xl font-semibold flex items-center gap-2">
-    🧾 When <span className="text-red-600 underline">NOT</span> to Use Linear Regression
+     When <span className="text-red-600 underline">NOT</span> to Use Linear Regression
   </h2>
   <p>Avoid Linear Regression if:</p>
   <ul className="list-disc list-inside ml-6 text-gray-700 space-y-1">

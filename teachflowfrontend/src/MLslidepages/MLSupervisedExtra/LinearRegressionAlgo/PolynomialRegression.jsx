@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PolynomialRegression() {
   return (
-       <div className="p-6 max-w-4xl mx-auto space-y-8 font-sans">
+    <div className="max-w-4xl mx-auto p-6 pt-16 space-y-6">
     <section className="p-6 max-w-4xl mx-auto space-y-6 text-gray-800">
       <h1 className="text-4xl font-bold text-blue-600">Polynomial Regression </h1>
 

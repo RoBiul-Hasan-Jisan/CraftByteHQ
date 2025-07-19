@@ -7,13 +7,9 @@ export default function ResponsiveSidebarWrapper({ showSidebar }) {
 
   useEffect(() => {
     function handleResize() {
-      const mobile = window.innerWidth < 768; // Tailwind md breakpoint
+      const mobile = window.innerWidth < 768;
       setIsMobile(mobile);
-      if (!mobile) {
-        setIsSidebarOpen(true);
-      } else {
-        setIsSidebarOpen(false);
-      }
+      setIsSidebarOpen(!mobile);
     }
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -26,44 +22,56 @@ export default function ResponsiveSidebarWrapper({ showSidebar }) {
     <>
       {/* Hamburger Button on mobile */}
       {isMobile && (
-        <button
-   onClick={() => setIsSidebarOpen(open => !open)}
-  className="fixed left-4 z-50 p-2 rounded bg-blue-600 text-white md:hidden"
-  aria-label="Toggle sidebar"
-  style={{ top: '150px' }} // e.g., 150px from top
+       <button
+  onClick={() => setIsSidebarOpen(open => !open)}
+  className="fixed left-4 top-16 z-50 p-1.5 rounded-md bg-blue-600 text-white shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-transform transform-gpu"
+  aria-label={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
+  aria-expanded={isSidebarOpen}
+  aria-controls="sidebar"
+  style={{
+    transitionProperty: "transform",
+    transitionDuration: "300ms",
+    transitionTimingFunction: "ease-in-out",
+    transform: isSidebarOpen ? "rotate(90deg)" : "rotate(0deg)",
+  }}
 >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
+  <svg
+    className="w-4 h-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M4 6h16M4 12h16M4 18h16"
+    />
+  </svg>
+</button>
+
       )}
 
-      {/* Sidebar */}
-      {isSidebarOpen && (
-        <aside
-          className={`
-            fixed top-0 left-0 h-full bg-gray-200 p-4 w-64 z-40
-            ${isMobile ? "shadow-lg" : "sticky top-0 self-start h-screen overflow-auto border-r border-gray-300"}
-          `}
-        >
-          <Sidebar
-            onLinkClick={() => {
-              if (isMobile) setIsSidebarOpen(false);
-            }}
-          />
-        </aside>
-      )}
+      {/* Sidebar with smooth slide-in/out transform */}
+      <aside
+        id="sidebar"
+        className={`
+          fixed top-0 left-0 h-full w-64 bg-gray-100 p-6 z-40 shadow-xl border-r border-gray-300
+          transform transition-transform duration-300 ease-in-out
+          ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
+          ${!isMobile ? "sticky top-0 self-start h-screen overflow-auto translate-x-0" : ""}
+        `}
+        role="navigation"
+        aria-label="Sidebar navigation"
+      >
+        <Sidebar
+          onLinkClick={() => {
+            if (isMobile) setIsSidebarOpen(false);
+          }}
+        />
+      </aside>
     </>
   );
 }

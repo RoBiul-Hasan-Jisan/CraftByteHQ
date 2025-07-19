@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function SimpleLinearRegression() {
   return (
-    <div className="p-6 max-w-3xl mx-auto space-y-6">
-      <h1 className="text-3xl font-bold mb-4">Simple Linear Regression</h1>
+   <div className="max-w-4xl mx-auto p-6 pt-16 space-y-6">
+      <h1 className="text-4xl font-bold text-blue-600">Simple Linear Regression</h1>
 
       <section>
         <h2 className="text-2xl font-semibold mb-2"> What is Simple Linear Regression?</h2>

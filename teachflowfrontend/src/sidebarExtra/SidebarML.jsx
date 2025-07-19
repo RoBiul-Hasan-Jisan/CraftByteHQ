@@ -5,9 +5,10 @@ export default function SidebarML() {
   const location = useLocation();
 
   return (
-    <aside className="w-64 bg-gray-200 p-4 min-h-screen">
+    <aside className="w-64 bg-gray-200 p-4 pt-16 h-full fixed top-0 left-0 overflow-y-auto md:relative z-40">
       <nav className="flex flex-col space-y-1">
-        <h2 className="font-bold mb-4 text-xl">Learn ML</h2>
+        <h2 className="font-bold mb-4 mt-8 md:mt-0 text-xl">Learn ML</h2>
+
         <Link
           to="/ml/introduction"
           className={`block py-2 px-3 rounded hover:bg-gray-300 ${
@@ -16,6 +17,7 @@ export default function SidebarML() {
         >
           Introduction
         </Link>
+
         <Link
           to="/ml/supervised"
           className={`block py-2 px-3 rounded hover:bg-gray-300 ${
@@ -24,6 +26,7 @@ export default function SidebarML() {
         >
           Supervised Learning
         </Link>
+
         <Link
           to="/ml/unsupervised"
           className={`block py-2 px-3 rounded hover:bg-gray-300 ${
@@ -32,6 +35,7 @@ export default function SidebarML() {
         >
           Unsupervised Learning
         </Link>
+
         <Link
           to="/ml/reinforcement"
           className={`block py-2 px-3 rounded hover:bg-gray-300 ${
@@ -42,6 +46,7 @@ export default function SidebarML() {
         </Link>
 
         <hr className="my-4" />
+
         <Link
           to="/"
           className="block py-2 px-3 rounded hover:bg-gray-300 text-sm font-semibold"

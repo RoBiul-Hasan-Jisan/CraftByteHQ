@@ -7,7 +7,7 @@ export default function MLSupervised() {
   const goTo = (path) => navigate(path);
 
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6">
+    <div className="max-w-4xl mx-auto p-6 space-y-6 mt-20">
       <h1 className="text-3xl font-bold mb-4 text-blue-700">Supervised Machine Learning</h1>
 
       <p>
@@ -46,8 +46,8 @@ export default function MLSupervised() {
           <ul className="list-disc list-inside ml-4">
             <li onClick={() => goTo("/ml/supervised/linear-regression")} className="text-blue-600 cursor-pointer hover:underline">🔷 Linear Regression</li>
             <li onClick={() => goTo("/ml/supervised/decision-tree")} className="text-blue-600 cursor-pointer hover:underline">🔷 Decision Tree Regression</li>
-            <li onClick={() => goTo("/supervised/random-forest")} className="text-blue-600 cursor-pointer hover:underline">🔷 Random Forest Regression</li>
-            <li onClick={() => goTo("/supervised/svr")} className="text-blue-600 cursor-pointer hover:underline">🔷 Support Vector Regression (SVR)</li>
+            <li onClick={() => goTo("/ml/supervised/random-forest")} className="text-blue-600 cursor-pointer hover:underline">🔷 Random Forest Regression</li>
+            <li onClick={() => goTo("/ml/supervised/svr")} className="text-blue-600 cursor-pointer hover:underline">🔷 Support Vector Regression (SVR)</li>
           </ul>
         </div>
 
@@ -58,22 +58,22 @@ export default function MLSupervised() {
           <ul className="list-disc list-inside ml-4">
 
             <li onClick={() => goTo("/ml/supervised/logistic-regression")} className="text-blue-600 cursor-pointer hover:underline">🔷 Logistic Regression</li>
-            <li onClick={() => goTo("/supervised/knn")} className="text-blue-600 cursor-pointer hover:underline">🔷 k-Nearest Neighbors (KNN)</li>
-            <li onClick={() => goTo("/supervised/decision-tree")} className="text-blue-600 cursor-pointer hover:underline">🔷 Decision Trees</li>
-            <li onClick={() => goTo("/supervised/svm")} className="text-blue-600 cursor-pointer hover:underline">🔷 Support Vector Machines (SVM)</li>
-            <li onClick={() => goTo("/supervised/naive-bayes")} className="text-blue-600 cursor-pointer hover:underline">🔷 Naive Bayes</li>
-            <li onClick={() => goTo("/supervised/random-forest")} className="text-blue-600 cursor-pointer hover:underline">🔷 Random Forest Classifier</li>
+            <li onClick={() => goTo("/ml/supervised/knn")} className="text-blue-600 cursor-pointer hover:underline">🔷 k-Nearest Neighbors (KNN)</li>
+            <li onClick={() => goTo("/ml/supervised/decision-tree")} className="text-blue-600 cursor-pointer hover:underline">🔷 Decision Trees</li>
+            <li onClick={() => goTo("/ml/supervised/svm")} className="text-blue-600 cursor-pointer hover:underline">🔷 Support Vector Machines (SVM)</li>
+            <li onClick={() => goTo("/ml/supervised/naive-bayes")} className="text-blue-600 cursor-pointer hover:underline">🔷 Naive Bayes</li>
+            <li onClick={() => goTo("/ml/supervised/random-forest")} className="text-blue-600 cursor-pointer hover:underline">🔷 Random Forest Classifier</li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-lg font-semibold">3. Advanced Ensemble Methods</h3>
           <ul className="list-disc list-inside ml-4">
-            <li onClick={() => goTo("/supervised/gbm")} className="text-blue-600 cursor-pointer hover:underline">🔷 Gradient Boosting Machines (GBM)</li>
-            <li onClick={() => goTo("/supervised/adaboost")} className="text-blue-600 cursor-pointer hover:underline">🔷 AdaBoost</li>
-            <li onClick={() => goTo("/supervised/xgboost")} className="text-blue-600 cursor-pointer hover:underline">🔷 XGBoost</li>
-            <li onClick={() => goTo("/supervised/lightgbm")} className="text-blue-600 cursor-pointer hover:underline">🔷 LightGBM</li>
-            <li onClick={() => goTo("/supervised/catboost")} className="text-blue-600 cursor-pointer hover:underline">🔷 CatBoost</li>
+            <li onClick={() => goTo("/ml/supervised/gbm")} className="text-blue-600 cursor-pointer hover:underline">🔷 Gradient Boosting Machines (GBM)</li>
+            <li onClick={() => goTo("/ml/supervised/adaboost")} className="text-blue-600 cursor-pointer hover:underline">🔷 AdaBoost</li>
+            <li onClick={() => goTo("/ml/supervised/xgboost")} className="text-blue-600 cursor-pointer hover:underline">🔷 XGBoost</li>
+            <li onClick={() => goTo("/ml/supervised/lightgbm")} className="text-blue-600 cursor-pointer hover:underline">🔷 LightGBM</li>
+            <li onClick={() => goTo("/ml/supervised/catboost")} className="text-blue-600 cursor-pointer hover:underline">🔷 CatBoost</li>
           </ul>
         </div>
       </div>

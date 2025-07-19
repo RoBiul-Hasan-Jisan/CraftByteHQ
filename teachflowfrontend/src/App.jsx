@@ -8,15 +8,6 @@ import ResponsiveSidebarWrapper from "./components/ResponsiveSidebarWrapper.jsx"
 
 import Home from "./pages/Home.jsx";
 
-import LearnAI from "./pages/LearnAI.jsx";
-import LearnML from "./pages/LearnML.jsx";
-import LearnDL from "./pages/LearnDL.jsx";
-import LearnMLOps from "./pages/LearnMLOps.jsx";
-import LearnDSA from "./pages/LearnDSA.jsx";
-import LearnOOPs from "./pages/LearnOOPs.jsx";
-import LearnComputerNetwork from "./pages/LearnComputerNetwork.jsx";
-import LearnOperatingSystem from "./pages/LearnOperatingSystem.jsx";
-import LearnDBMS from "./pages/LearnDBMS.jsx";
 
 // ML parts
 import MLIntroduction from "./MLslidepages/MLIntroduction.jsx";
@@ -26,6 +17,11 @@ import MLReinforcement from "./MLslidepages/MLReinforcement.jsx";
 
 import LinearRegression from "./MLslidepages/MLSupervisedExtra/LinearRegression";
 import LogisticRegression from "./MLslidepages/MLSupervisedExtra/LogisticRegression";
+import DecisionTreeRegression from "./MLslidepages/MLSupervisedExtra/DecisionTreeRegression";
+import RandomForestRegression from "./MLslidepages/MLSupervisedExtra/RandomForestRegression";
+
+
+
 
 import SimpleLinearRegression from './MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/SimpleLinearRegression.jsx';
 import MultipleLinearRegression from './MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/MultipleLinearRegression.jsx';
@@ -78,16 +74,8 @@ function AppContent() {
           <Routes>
             <Route path="/" element={<Home />} />
 
-            {/* Main topics */}
-            <Route path="/ai" element={<LearnAI />} />
-            <Route path="/ml" element={<LearnML />} />
-            <Route path="/dl" element={<LearnDL />} />
-            <Route path="/mlops" element={<LearnMLOps />} />
-            <Route path="/dsa" element={<LearnDSA />} />
-            <Route path="/oops" element={<LearnOOPs />} />
-            <Route path="/computer-network" element={<LearnComputerNetwork />} />
-            <Route path="/os" element={<LearnOperatingSystem />} />
-            <Route path="/dbms" element={<LearnDBMS />} />
+  
+          
 
             {/* ML subtopics */}
             <Route path="/ml/introduction" element={<MLIntroduction />} />
@@ -98,7 +86,10 @@ function AppContent() {
             {/* ML Supervised detailed routes */}
             <Route path="/ml/supervised/linear-regression" element={<LinearRegression />} />
             <Route path="/ml/supervised/logistic-regression" element={<LogisticRegression />} />
-
+            <Route path="/ml/supervised/decision-tree" element={<DecisionTreeRegression />} />
+            <Route path="/ml/supervised/random-forest" element={<RandomForestRegression />}/>
+            
+            
             {/* ML Supervised Linear Algorithms */}
             <Route path="/SimpleLinearRegression" element={<SimpleLinearRegression />} />
             <Route path="/MultipleLinearRegression" element={<MultipleLinearRegression />} />

@@ -7,18 +7,17 @@ export default function Header() {
   const toggleDropdown = () => setShowDropdown(!showDropdown);
 
   return (
-    <header className="bg-blue-600 text-white p-4 text-2xl font-bold relative">
+    <header className="bg-blue-600 text-white p-4 text-2xl font-bold fixed top-0 left-0 w-full z-50 shadow-md">
       <div className="flex justify-between items-center">
-      
-      <Link
-  to="/"
-  className="cursor-pointer hover:text-blue-300 transition-colors duration-200"
->
-  CraftByteHQ
-</Link>
+        {/* Logo / Site Title */}
+        <Link
+          to="/"
+          className="cursor-pointer hover:text-blue-300 transition-colors duration-200"
+        >
+          CraftByteHQ
+        </Link>
 
-
-
+        {/* Dropdown Button */}
         <div className="relative">
           <button
             onClick={toggleDropdown}
@@ -26,6 +25,8 @@ export default function Header() {
           >
             Tutorials
           </button>
+
+          {/* Dropdown Menu */}
           {showDropdown && (
             <div className="absolute right-0 mt-2 w-56 bg-white text-black rounded shadow-lg z-10">
               <ul className="py-2 text-base">
@@ -35,48 +36,42 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/ml" className="block px-4 py-2 hover:bg-gray-200">
+                  <Link to="/ml/introduction" className="block px-4 py-2 hover:bg-gray-200">
                     Learn ML
                   </Link>
                 </li>
                 <li>
-                  <Link to="/dl" className="block px-4 py-2 hover:bg-gray-200">
+                  <Link to="/dl/introduction" className="block px-4 py-2 hover:bg-gray-200">
                     Learn DL
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/mlops"
-                    className="block px-4 py-2 hover:bg-gray-200"
-                  >
+                  <Link to="/mlops/introduction" className="block px-4 py-2 hover:bg-gray-200">
                     Learn MLOps
                   </Link>
                 </li>
                 <li>
-                  <Link to="/dsa" className="block px-4 py-2 hover:bg-gray-200">
+                  <Link to="/dsa/arrays" className="block px-4 py-2 hover:bg-gray-200">
                     Learn DSA
                   </Link>
                 </li>
                 <li>
-                  <Link to="/oops" className="block px-4 py-2 hover:bg-gray-200">
+                  <Link to="/oops/introduction" className="block px-4 py-2 hover:bg-gray-200">
                     Learn OOPs
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/computer-network"
-                    className="block px-4 py-2 hover:bg-gray-200"
-                  >
+                  <Link to="/computer-network/introduction" className="block px-4 py-2 hover:bg-gray-200">
                     Learn Computer Network
                   </Link>
                 </li>
                 <li>
-                  <Link to="/os" className="block px-4 py-2 hover:bg-gray-200">
+                  <Link to="/os/introduction" className="block px-4 py-2 hover:bg-gray-200">
                     Learn Operating System
                   </Link>
                 </li>
                 <li>
-                  <Link to="/dbms" className="block px-4 py-2 hover:bg-gray-200">
+                  <Link to="/dbms/introduction" className="block px-4 py-2 hover:bg-gray-200">
                     Learn DBMS
                   </Link>
                 </li>

@@ -2,8 +2,8 @@ import React from "react";
 
 export default function MultipleLinearRegression() {
   return (
-    <div className="p-6 max-w-4xl mx-auto space-y-8 font-sans">
-      <h1 className="text-4xl font-bold mb-6">Multiple Linear Regression (MLR)</h1>
+   <div className="max-w-4xl mx-auto p-6 pt-16 space-y-6">
+      <h1 className="text-4xl font-bold text-blue-600">Multiple Linear Regression (MLR)</h1>
 
       <section>
         <h2 className="text-2xl font-semibold mb-2"> What is Multiple Linear Regression?</h2>
