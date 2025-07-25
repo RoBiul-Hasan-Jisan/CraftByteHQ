@@ -19,6 +19,10 @@ import LinearRegression from "./MLslidepages/MLSupervisedExtra/LinearRegression"
 import LogisticRegression from "./MLslidepages/MLSupervisedExtra/LogisticRegression";
 import DecisionTreeRegression from "./MLslidepages/MLSupervisedExtra/DecisionTreeRegression";
 import RandomForestRegression from "./MLslidepages/MLSupervisedExtra/RandomForestRegression";
+import SVRO from "./MLslidepages/MLSupervisedExtra/SVRO.jsx";
+import RidgeRegression from "./MLslidepages/MLSupervisedExtra/RidgeRegression.jsx";
+import LassoRegression from "./MLslidepages/MLSupervisedExtra/LassoRegression.jsx";
+import ElasticNetRegression from "./MLslidepages/MLSupervisedExtra/ElasticNetRegression.jsx";
 
 
 
@@ -88,8 +92,14 @@ function AppContent() {
             <Route path="/ml/supervised/logistic-regression" element={<LogisticRegression />} />
             <Route path="/ml/supervised/decision-tree" element={<DecisionTreeRegression />} />
             <Route path="/ml/supervised/random-forest" element={<RandomForestRegression />}/>
-            
-            
+           <Route path="/ml/supervised/svr" element={<SVRO />} />
+             <Route path="/ml/supervised/ridge" element={<RidgeRegression />} />
+             <Route path="/ml/supervised/lasso" element={<LassoRegression/>} />
+             <Route path="/ml/supervised/elastic-net" element={<ElasticNetRegression/>} />
+             
+
+
+          
             {/* ML Supervised Linear Algorithms */}
             <Route path="/SimpleLinearRegression" element={<SimpleLinearRegression />} />
             <Route path="/MultipleLinearRegression" element={<MultipleLinearRegression />} />
