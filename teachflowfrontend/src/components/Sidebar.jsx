@@ -4,7 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 import SidebarML from "../sidebarExtra/SidebarML";
 import SidebarDL from "../sidebarExtra/SidebarDL";
 import SidebarAI from "../sidebarExtra/SidebarAI";
-import SidebarDSA from "../sidebarExtra/SidebarDSA";
 
 export default function Sidebar() {
   const location = useLocation();
@@ -95,16 +94,7 @@ export default function Sidebar() {
             Learn MLOps
           </Link>
 
-          <Link
-            to="/dsa"
-            className={`block py-2 px-3 rounded hover:bg-gray-300 ${
-              path === "/dsa" ? "bg-blue-400 text-white" : ""
-            }`}
-            onClick={() => setIsOpen(false)}
-          >
-            Learn DSA
-          </Link>
-
+          
           <Link
             to="/oops"
             className={`block py-2 px-3 rounded hover:bg-gray-300 ${

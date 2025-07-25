@@ -36,10 +36,16 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/ml/introduction" className="block px-4 py-2 hover:bg-gray-200">
-                    Learn ML
-                  </Link>
-                </li>
+  <a
+    href="https://ml-sandy.vercel.app/ml/introduction"
+  
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Learn ML
+  </a>
+</li>
+
                 <li>
                   <Link to="/dl/introduction" className="block px-4 py-2 hover:bg-gray-200">
                     Learn DL
@@ -50,11 +56,20 @@ export default function Header() {
                     Learn MLOps
                   </Link>
                 </li>
-                <li>
-                  <Link to="/dsa/arrays" className="block px-4 py-2 hover:bg-gray-200">
-                    Learn DSA
-                  </Link>
-                </li>
+             
+
+            <li>
+  <a
+    href="https://dsa-lovat-gamma.vercel.app/array"
+   
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    DSA
+  </a>
+</li>
+
+               
                 <li>
                   <Link to="/oops/introduction" className="block px-4 py-2 hover:bg-gray-200">
                     Learn OOPs

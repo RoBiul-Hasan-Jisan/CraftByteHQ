@@ -10,31 +10,12 @@ import Home from "./pages/Home.jsx";
 
 
 // ML parts
-import MLIntroduction from "./MLslidepages/MLIntroduction.jsx";
-import MLSupervised from "./MLslidepages/MLSupervised.jsx";
-import MLUnsupervised from "./MLslidepages/MLUnsupervised.jsx";
-import MLReinforcement from "./MLslidepages/MLReinforcement.jsx";
-
-import LinearRegression from "./MLslidepages/MLSupervisedExtra/LinearRegression";
-import LogisticRegression from "./MLslidepages/MLSupervisedExtra/LogisticRegression";
-import DecisionTreeRegression from "./MLslidepages/MLSupervisedExtra/DecisionTreeRegression";
-import RandomForestRegression from "./MLslidepages/MLSupervisedExtra/RandomForestRegression";
-import SVRO from "./MLslidepages/MLSupervisedExtra/SVRO.jsx";
-import RidgeRegression from "./MLslidepages/MLSupervisedExtra/RidgeRegression.jsx";
-import LassoRegression from "./MLslidepages/MLSupervisedExtra/LassoRegression.jsx";
-import ElasticNetRegression from "./MLslidepages/MLSupervisedExtra/ElasticNetRegression.jsx";
+//import MLIntroduction from "./MLslidepages/MLIntroduction.jsx";
+//import MLSupervised from "./MLslidepages/MLSupervised.jsx";
+//import MLUnsupervised from "./MLslidepages/MLUnsupervised.jsx";
+//import MLReinforcement from "./MLslidepages/MLReinforcement.jsx";
 
 
-
-
-import SimpleLinearRegression from './MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/SimpleLinearRegression.jsx';
-import MultipleLinearRegression from './MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/MultipleLinearRegression.jsx';
-import PolynomialRegression from './MLslidepages/MLSupervisedExtra/LinearRegressionAlgo/PolynomialRegression.jsx';
-
-import DSAArrays from "./dsapages/DSAArrays.jsx";
-import DSALinkedList from "./dsapages/DSALinkedList.jsx";
-import DSATrees from "./dsapages/DSATrees.jsx";
-import DSAGraphs from "./dsapages/DSAGraphs.jsx";
 
 function AppContent() {
   const location = useLocation();
@@ -49,11 +30,9 @@ function AppContent() {
     "/ml/reinforcement",
     "/dl",
     "/mlops",
-    "/dsa",
-    "/dsa/arrays",
-    "/dsa/linkedlist",
-    "/dsa/trees",
-    "/dsa/graphs",
+  
+    
+    
     "/oops",
     "/computer-network",
     "/os",
@@ -81,35 +60,9 @@ function AppContent() {
   
           
 
-            {/* ML subtopics */}
-            <Route path="/ml/introduction" element={<MLIntroduction />} />
-            <Route path="/ml/supervised" element={<MLSupervised />} />
-            <Route path="/ml/unsupervised" element={<MLUnsupervised />} />
-            <Route path="/ml/reinforcement" element={<MLReinforcement />} />
-
-            {/* ML Supervised detailed routes */}
-            <Route path="/ml/supervised/linear-regression" element={<LinearRegression />} />
-            <Route path="/ml/supervised/logistic-regression" element={<LogisticRegression />} />
-            <Route path="/ml/supervised/decision-tree" element={<DecisionTreeRegression />} />
-            <Route path="/ml/supervised/random-forest" element={<RandomForestRegression />}/>
-           <Route path="/ml/supervised/svr" element={<SVRO />} />
-             <Route path="/ml/supervised/ridge" element={<RidgeRegression />} />
-             <Route path="/ml/supervised/lasso" element={<LassoRegression/>} />
-             <Route path="/ml/supervised/elastic-net" element={<ElasticNetRegression/>} />
-             
-
-
-          
-            {/* ML Supervised Linear Algorithms */}
-            <Route path="/SimpleLinearRegression" element={<SimpleLinearRegression />} />
-            <Route path="/MultipleLinearRegression" element={<MultipleLinearRegression />} />
-            <Route path="/PolynomialRegression" element={<PolynomialRegression />} />
-
+           
             {/* DSA subtopics */}
-            <Route path="/dsa/arrays" element={<DSAArrays />} />
-            <Route path="/dsa/linkedlist" element={<DSALinkedList />} />
-            <Route path="/dsa/trees" element={<DSATrees />} />
-            <Route path="/dsa/graphs" element={<DSAGraphs />} />
+           
           </Routes>
         </main>
       </div>
@@ -118,8 +71,8 @@ function AppContent() {
     </>
   );
 }
-
 export default function App() {
+
   return (
     <Router>
       <AppContent />
