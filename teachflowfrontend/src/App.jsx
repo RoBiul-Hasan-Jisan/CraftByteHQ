@@ -52,16 +52,13 @@ function AppContent() {
         {/* Responsive Sidebar with hamburger toggle */}
         <ResponsiveSidebarWrapper showSidebar={showSidebar} />
 
-        {/* Main content, margin-left adjusted on desktop when sidebar shown */}
+   
       <main className={`flex-1 w-full min-h-screen ${!showSidebar ? "" : "md:ml-64"}`}>
           <Routes>
             <Route path="/" element={<Home />} />
 
   
-          
-
-           
-            {/* DSA subtopics */}
+        
            
           </Routes>
         </main>
