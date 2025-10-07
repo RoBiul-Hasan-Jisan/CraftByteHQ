@@ -76,10 +76,15 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/computer-network/introduction" className="block px-4 py-2 hover:bg-gray-200">
-                    Learn Computer Network
-                  </Link>
-                </li>
+                 <a
+    href="https://os-jet-one.vercel.app/intro"
+   
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    OS
+  </a>
+</li>
                 <li>
                   <Link to="/os/introduction" className="block px-4 py-2 hover:bg-gray-200">
                     Learn Operating System

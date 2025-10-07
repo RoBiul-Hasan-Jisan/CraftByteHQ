@@ -13,14 +13,19 @@ const categories = [
   { name: "MLOps", path: "/mlops", icon: "⚙️", external: false },
   {
     name: "Data Structures & Algorithms",
-    path: "https://craft-byte-hq.vercel.app/dsa/arrays", // no leading slash and mark external true
+    path: "https://dsa-lovat-gamma.vercel.app/array", // no leading slash and mark external true
     icon: "📚",
     external: true,
   },
   
   { name: "Object-Oriented Programming", path: "/oops", icon: "🧩", external: false },
   { name: "Computer Networks", path: "/computer-network", icon: "🌐", external: false },
-  { name: "Operating System", path: "/os", icon: "💻", external: false },
+  { 
+    name: "Operating System",
+    path: "https://os-jet-one.vercel.app/intro", 
+    icon: "💻",
+    external: true, 
+    },
   { name: "DBMS", path: "/dbms", icon: "🗄️", external: false },
 ];
 
